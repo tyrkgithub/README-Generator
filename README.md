@@ -7,12 +7,12 @@ ${data.description}
   
 ## Table of Contents
 
-Insallation
-Usage
-License
-Contributing
-Tests
-Questions
+Insallation  
+Usage  
+License  
+Contributing  
+Tests  
+Questions  
   
 ## Installation
 
