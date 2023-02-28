@@ -11,6 +11,7 @@ This is a README Generator which will create professional looking README files i
 - [Contributing](#Contibuting)
 - [Tests](#Tests)
 - [Questions](#Questions)
+- [Video Submission](#Video Submission)
   
 ## Installation
 To make use of this project, the user will need to install Node.js to use Node Package Manager.
