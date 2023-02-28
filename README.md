@@ -23,4 +23,6 @@ There are no contributions currently on this project. To add a contribution plea
 ## Tests
 This had not undergone full testing and has only been tested by the creator. 
 ## Questions
-If you have any questions on this project or if you would like to discuss anything code related then please reach out to me through my [gitHub profile](https://github.com/tyrkgithub)
+If you have any questions on this project or if you would like to discuss anything code related then please reach out to me through my [gitHub profile](https://github.com/tyrkgithub)  
+## Video Submission
+[Screen Recording of README Generator.mp4.zip](https://github.com/tyrkgithub/README-Generator/files/10853834/Screen.Recording.of.README.Generator.mp4.zip)
