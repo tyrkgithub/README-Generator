@@ -9,22 +9,22 @@ const questions = [
   {
     type: "input",
     name: "title",
-    message: "Please enter the title for the README.md",
+    message: "Please enter the title for the README.md:",
   },
   {
     type: "input",
     name: "description",
-    message: "Please enter a description of the project",
+    message: "Please enter a description of the project:",
   },
   {
     type: "input",
     name: "install",
-    message: "Please enter how a user should install the project",
+    message: "Please enter how a user should install the project:",
   },
   {
     type: "input",
     name: "use",
-    message: "Please enter the use of this project",
+    message: "Please enter the use of this project:",
   },
   {
     type: "list",
@@ -46,7 +46,7 @@ const questions = [
     type: "input",
     name: "questions",
     message:
-      "Please enter your gitHub username, so a link to your profile can be added so you can be contacted for questions",
+      "Please enter your gitHub username, so a link to your profile can be added so you can be contacted for questions:",
   },
 ];
 
