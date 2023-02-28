@@ -13,7 +13,7 @@ const questions = [
   },
   {
     type: "input",
-    name: "descriptiom",
+    name: "description",
     message: "Please enter a description of the project",
   },
   {
@@ -30,7 +30,7 @@ const questions = [
     type: "list",
     name: "license",
     message: "Which license would you like to use?",
-    choices: ["MIT", "APACHE 2.0", "GPL", "None"],
+    choices: ["MIT", "APACHE 2.0", "GPLv2", "GPLv3", "None"],
   },
   {
     type: "input",
@@ -46,9 +46,34 @@ const questions = [
     type: "input",
     name: "questions",
     message:
-      "Please enter the URL to your gitHub profile, so you can be contacted for questions",
+      "Please enter your gitHub username, so a link to your profile can be added so you can be contacted for questions",
   },
 ];
+
+let licenseType = questions.license;
+console.log(licenseType);
+function licenseBadge(license) {
+  let lImg = "";
+
+  if (license == "MIT") {
+    lImg =
+      "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+  }
+  if (license == "APACHE 2.0") {
+    lImg =
+      "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+  }
+  if (license == "GPLv3") {
+    lImg =
+      "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+  }
+  if (license == "GPLv2") {
+    lImg =
+      "[![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)";
+  }
+
+  return lImg;
+}
 
 function writeFile(fileName, data) {
   return fs.writeFileSync(path.join(process.cwd(), fileName), data);
@@ -57,9 +82,13 @@ function writeFile(fileName, data) {
 function init() {
   inquirer
     .prompt(questions)
-    .then((response) => {
-      console.log(`Generating README...`);
-      writeFile("READMEgen.md", generateMarkdown({ ...response }));
+    .then((result) => {
+      let licenseType = result.license;
+
+      const lImgMarkdown = licenseBadge(licenseType);
+
+      writeFile("README.md", generateMarkdown({ ...result }, lImgMarkdown));
+      console.log(`README created`);
     })
     .catch((err) => console.error(err));
 }
